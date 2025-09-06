@@ -3,14 +3,9 @@
 import Image from "next/image";
 import Button from "../button";
 import { useState, useEffect, use } from "react";
-import { TMDBTrendingItem } from "@/types/trending";
+import { TMDBItem } from "@/types/trending";
 
-const Poster = ({
-  title,
-  overview,
-  backdrop_path,
-  poster_path,
-}: TMDBTrendingItem) => {
+const Poster = ({ title, overview, backdrop_path, poster_path }: TMDBItem) => {
   const [loaded, setLoaded] = useState<boolean>(false);
   if (backdrop_path) {
     console.log("bg:", backdrop_path);
