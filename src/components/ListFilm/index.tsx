@@ -26,7 +26,7 @@ const ListFilm = ({ type }: { type: "movie" | "tv" }) => {
     "
       >
         <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  p-4 z-50 text-4xl font-bold">
-          Movies
+          {type === "movie" ? "Movies" : "Tv Series"}
         </span>
       </div>
       <div className="   px-4 md:px-8 py-8 xl:p-16">
