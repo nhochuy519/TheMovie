@@ -4,6 +4,7 @@ import Card from "@/components/Card";
 
 import React, { useState } from "react";
 import { useFilmList } from "@/hooks/useFilmList";
+import { TMDBItem } from "@/types/trending";
 
 const ListFilm = ({ type }: { type: "movie" | "tv" }) => {
   const [search, setSearch] = useState<string>("");
@@ -48,7 +49,7 @@ const ListFilm = ({ type }: { type: "movie" | "tv" }) => {
             />
           </div>
           <div className="flex flex-wrap -mx-2 mt-16 ">
-            {films?.map((item, index) => {
+            {films?.map((item: TMDBItem, index: number) => {
               return (
                 <div className="px-2 w-1/2 md:w-1/4 lg:w-1/6 mb-8" key={index}>
                   <Card data={item} />

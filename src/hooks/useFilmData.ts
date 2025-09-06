@@ -14,7 +14,7 @@ const useFilmData = (id: number, type: "movie" | "tv") => {
           poster_path: data.poster_path,
           genres: data.genres,
           overview: data.overview,
-          title: data.title,
+          title: data.title || data.name,
           backdrop_path: data.backdrop_path,
         }),
       },

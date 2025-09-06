@@ -26,7 +26,7 @@ const FilmInfor = ({ id, type }: { id: number; type: "movie" | "tv" }) => {
               src={
                 detailFilm.data
                   ? `https://image.tmdb.org/t/p/original/${detailFilm.data.poster_path}`
-                  : ""
+                  : "/gray.jpg"
               }
               alt="card Image"
               width={352}
@@ -63,7 +63,7 @@ const FilmInfor = ({ id, type }: { id: number; type: "movie" | "tv" }) => {
               <div className="flex  flex-wrap -mx-2 mt-1 ">
                 {casts.data?.cast?.map((item, index) => {
                   return (
-                    <div className="w-28 px-2  relative px-2  ">
+                    <div className="w-28 px-2  relative px-2  " key={item.id}>
                       <div className="relative w-full   ">
                         <Image
                           src={`https://image.tmdb.org/t/p/original/${item.profile_path}`}
