@@ -9,6 +9,7 @@ interface FilmDetail {
   overview?: string;
   title?: string;
   backdrop_path: string;
+  name?: string;
 }
 interface Video {
   id: string;
