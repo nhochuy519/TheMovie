@@ -7,7 +7,7 @@ export interface TMDBResponse {
 
 export interface TMDBItem {
   id?: number;
-  media_type: "movie" | "tv" | "person";
+  media_type?: "movie" | "tv" | "person";
   adult?: boolean;
 
   // Movie fields
