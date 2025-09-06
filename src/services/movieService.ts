@@ -87,7 +87,7 @@ const movieService = {
     query: string = ""
   ) => {
     let url = `/discover/${type}`;
-    console.log("url ben get film", url);
+
     let params: {
       include_adult?: boolean;
       include_video?: boolean;

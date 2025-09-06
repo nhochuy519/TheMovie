@@ -24,11 +24,11 @@ export default function Home() {
           getTrendingTV(),
           getTopRatedTV(),
         ]);
-      console.log("toprate la", topRatedMovies);
+
       return { trendingMovies, topRatedMovies, trendingTV, topRatedTV };
     },
   });
-  console.log(data, "data ben home");
+
   return (
     <div>
       <SliderPoster />

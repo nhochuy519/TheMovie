@@ -19,7 +19,7 @@ const Poster = ({
 }: TMDBItem) => {
   const [open, setOpen] = useState<boolean>(false);
   const { video } = useFilmData(id ? +id : 0, "movie");
-  console.log("video la", video.data);
+
   return (
     <div
       className={` cursor-pointer relative flex items-center justify-center   w-full bg-cover bg-center relative md:py-32 md:px-12 flex items-center px-4 py-16   bg-gradient-to-t from-white to-black/90 
