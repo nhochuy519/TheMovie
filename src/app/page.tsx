@@ -34,16 +34,24 @@ export default function Home() {
       <SliderPoster />
       <div className="py-[4rem] px-[2rem] ">
         <div className="max-w-screen-2xl mx-auto  ">
-          <SliderCard data={data?.trendingMovies} title="Trending Movie" />
+          <SliderCard
+            data={data?.trendingMovies}
+            title="Trending Movie"
+            type="movie"
+          />
         </div>
         <div className="max-w-screen-2xl mx-auto mt-[4rem] ">
-          <SliderCard data={data?.topRatedMovies} title="Top Rated Movies" />
+          <SliderCard
+            data={data?.topRatedMovies}
+            title="Top Rated Movies"
+            type="movie"
+          />
         </div>
         <div className="max-w-screen-2xl mx-auto mt-[4rem] ">
-          <SliderCard data={data?.trendingTV} title="Trending TV" />
+          <SliderCard data={data?.trendingTV} title="Trending TV" type="tv" />
         </div>
         <div className="max-w-screen-2xl mx-auto mt-[4rem] ">
-          <SliderCard data={data?.topRatedTV} title="Top Rated TV" />
+          <SliderCard data={data?.topRatedTV} title="Top Rated TV" type="tv" />
         </div>
       </div>
     </div>

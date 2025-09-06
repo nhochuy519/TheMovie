@@ -86,6 +86,9 @@ const FilmInfor = ({ id, type }: { id: number; type: "movie" | "tv" }) => {
         {video?.data?.results.map((item, index) => {
           return (
             <div className="w-full mb-16 " key={index}>
+              <div className="w-full mb-4  ">
+                <h3 className="text-base md:text-2xl">{item.name}</h3>
+              </div>
               <YouTubeEmbed name={item.name} keyVideo={item.key} />
             </div>
           );

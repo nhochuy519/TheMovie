@@ -7,18 +7,30 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Button from "@/components/button";
 import Card from "../Card";
+import Link from "next/link";
 
 import { TMDBItem } from "@/types/trending";
 
-const SliderCard = ({ title, data }: { title: string; data: TMDBItem[] }) => {
+const SliderCard = ({
+  title,
+  data,
+  type,
+}: {
+  title: string;
+  data: TMDBItem[];
+  type: string;
+}) => {
   return (
     <div className="w-full">
       <div className="flex justify-between items-center w-full">
         <div className="md:text-[1.5rem] text-base">{title}</div>
-        <Button
-          text="View more"
-          className="md:text-[1.125rem] text-sm px-4 md:px-6"
-        />
+        <Link href={`/${type}`}>
+          {" "}
+          <Button
+            text="View more"
+            className="md:text-[1.125rem] text-sm px-4 md:px-6"
+          />
+        </Link>
       </div>
 
       <div className="mt-8 cursor-pointer">

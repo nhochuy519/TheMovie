@@ -37,6 +37,7 @@ const SliderPoster = () => {
                 backdrop_path={item.backdrop_path}
                 overview={item.overview}
                 poster_path={item.poster_path}
+                id={item.id}
               />
             </SwiperSlide>
           );
