@@ -3,10 +3,15 @@ import { TMDBItem } from "@/types/trending";
 import { Cast } from "@/types/filmDetail";
 const movieService = {
   getTrendingPopularity: async () => {
-    const res = await instance.get("/trending/all/day");
-    const movies = res.data.results
-      .sort((a: TMDBItem, b: TMDBItem) => b.popularity - a.popularity)
-      .slice(0, 5);
+    const res = await instance.get("/discover/movie", {
+      params: {
+        include_adult: false, // tránh phim 18+
+        include_video: false,
+        sort_by: "popularity.desc",
+        page: 1,
+      },
+    });
+    const movies = res.data.results.slice(0, 5);
     return movies;
   },
   getTrendingMovies: async () => {
